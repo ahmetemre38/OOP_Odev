@@ -8,12 +8,9 @@ class Nokta {
 class Ucgen {
     constructor(k1,k2,k3)
     {
-        let _kose1 = new Nokta(k1.x,k1.y);
-        let _kose2 = new Nokta(k2.x,k2.y);
-        let _kose3 = new Nokta(k3.x,k3.y);
-        this.k1 = _kose1;
-        this.k2 = _kose2;
-        this.k3 = _kose3;
+        this.k1 = new Nokta(k1.x,k1.y);
+        this.k2 = new Nokta(k2.x,k2.y);
+        this.k3 = new Nokta(k3.x,k3.y);
     }
 
     uzunluk = (kose1,kose2) => {
@@ -32,9 +29,7 @@ class Ucgen {
         let k3 = this.k3;
         let alan = Math.abs(((k1.x*k2.y)+(k2.x*k3.y)+(k3.x*k1.y))-((k1.y*k2.x)+(k2.y*k3.x)+(k3.y*k1.x)))/2;
         return alan;
-    }
-    
-
+    }  
 }
 
 let kose1 = new Nokta(1,1);
